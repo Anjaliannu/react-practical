@@ -45,7 +45,7 @@ const TalentSignUp = () => {
             </p>
           </label>
 
-          <button onClick={handleTalentApi}>Sign Up</button>
+          <button onClick={()=>handleTalentApi()}>Sign Up</button>
         </form>
       </div>
     </>

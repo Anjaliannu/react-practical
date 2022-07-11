@@ -1,21 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { postFanApi } from "../../api/api";
 
 
 const SignUp = () => {
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
+  const [first_name, setFirstname] = useState("");
+  const [last_name, setLastname] = useState("");
   const [username, setusername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const data = { firstname, lastname, username, email, password };
+  const data = { first_name, last_name, username, email, password };
 
   const handleTalentApi = async () => {
     const res = await postFanApi(data)
     console.log(res);
   };
-
+useEffect(()=>{
+  // handleTalentApi()
+})
   return (
     <>
       <div>
@@ -24,7 +26,7 @@ const SignUp = () => {
           <label>First name*</label>
           <input
             type="text"
-            value={firstname}
+            value={first_name}
             onChange={(e) => setFirstname(e.target.value)}
             required
           />
@@ -32,7 +34,7 @@ const SignUp = () => {
           <label>Last name*</label>
           <input
             type="text"
-            value={lastname}
+            value={last_name}
             onChange={(e) => setLastname(e.target.value)}
             required
           />
