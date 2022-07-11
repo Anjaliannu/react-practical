@@ -1,4 +1,6 @@
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -13,35 +15,34 @@ body {
   flex-direction: column;
   position: relative;
   width: 500px;
-  height: 300px;
-  background: #f1f1f1;
-  margin: 100px auto 0;
+  /* margin: 100px auto 0; */
   word-break: break-all;
-  border: 1px solid rgba(0, 0, 0, 0.274);
 }
 
 .bloc-tabs {
   display: flex;
 }
 .tabs {
-
   padding: 15px;
   text-align: center;
   width: 50%;
-  background: rgba(128, 128, 128, 0.075);
+  background: #000;
+  color: #fff;
   cursor: pointer;
   border-bottom: 1px solid rgba(0, 0, 0, 0.274);
   box-sizing: content-box;
   position: relative;
   outline: none;
+  border-radius: 30px;
 }
-.tabs:not(:last-child){
+.tabs:not(:last-child) {
   border-right: 1px solid rgba(0, 0, 0, 0.274);
 }
 
-.active-tabs  {
-  background: white;
-  border-bottom: 1px solid transparent;
+.active-tabs {
+  background-color: #17db17a6;
+  color: #000;
+  border-radius: 30px;
 }
 
 .active-tabs::before {
@@ -53,20 +54,19 @@ body {
   transform: translateX(-50%);
   width: calc(100% + 2px);
   height: 5px;
-  background: rgb(88, 147, 241);
 }
-
-
 
 button {
   border: none;
-  
+  background: #17db17a6;
+  color: black;
+  font-weight: bold;
+  border-radius: 1.5rem;
 }
 .content-tabs {
-  flex-grow : 1;
+  flex-grow: 1;
 }
 .content {
-  background: white;
   padding: 20px;
   width: 100%;
   height: 100%;
